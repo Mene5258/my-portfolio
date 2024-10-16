@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+main {
+  background-color: var(--white-color);
+  padding-bottom: 80px;
+}
+
+.logo {
+  width: 60px;
+  height: 50px;
+  margin: 12px 0 0 12px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--brown-color);
+  text-align: center;
+  margin: 40px 0;
+}
+
+main form {
+  max-width: 295px;
+  color: #a56d55;
+  margin: 0 auto;
+}
+
+main form p,
+label {
+  font-size: 12px;
+}
+
+.title {
+  margin-bottom: 4px;
+}
+
+.title:nth-of-type(4) {
+  margin-top: 12px;
+}
+
+main input[type="text"] {
+  width: 100%;
+  height: 20px;
+  border: 1px solid var(--brown-color);
+  padding-left: 5px;
+  margin-bottom: 20px;
+}
+
+input[type="radio"] {
+  position: relative;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--brown-color);
+  border-radius: 50%;
+  vertical-align: -2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin-right: 4px;
+}
+
+input[type="radio"]:checked:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--black-color);
+  content: '';
+}
+
+label:first-of-type {
+  margin-right: 30px;
+}
+
+label:nth-of-type(2) {
+  margin-right: 21px;
+}
+
+
+#card_month,
+#card_year,
+#card_security_code {
+  width: 60px;
+}
+
+#card_month,
+#card_year {
+  margin-right: 12px;
+}
+
+#card_month {
+  margin-bottom: 8px;
+}
+
+#card_security_code {
+  margin-bottom: 40px;
+}
+
+button {
+  font-size: 16px;
+  background-color: var(--brown-color);
+  width: 200px;
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+@media screen and (min-width:768px) {
+  main {
+    padding-bottom: 255px;
+  }
+
+  .main-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 80px;
+    height: 67px;
+    margin: 20px 0 0 20px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin: 73px 0 70px;
+  }
+
+  main form {
+    max-width: 600px;
+  }
+
+  main form p,
+  label {
+    font-size: 24px;
+  }
+
+  .title {
+    margin-bottom: 0;
+  }
+
+  .title:nth-of-type(4) {
+    margin-top: 40px;
+  }
+
+  main input[type="text"] {
+    height: 32px;
+    margin-bottom: 40px;
+  }
+
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 3px;
+  }
+
+  input[type="radio"]:checked:before {
+    width: 20px;
+    height: 20px;
+  }
+
+  label:not(:last-of-type) {
+    margin-right: 40px;
+  }
+
+  #card_month,
+  #card_year,
+  #card_security_code {
+    width: 182px;
+  }
+
+  #card_month,
+  #card_year {
+    margin-right: 12px;
+  }
+
+  #card_month {
+    margin-bottom: 8px;
+  }
+
+  #card_security_code {
+    margin-bottom: 80px;
+  }
+
+  button {
+    font-size: 20px;
+    width: 300px;
+    height: 60px;
+  }
+
+  button:hover {
+    transform: translateY(-10px);
+  }
+}

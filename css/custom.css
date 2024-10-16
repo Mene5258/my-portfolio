@@ -1,0 +1,299 @@
+@charset "utf-8";
+
+/* スタイリング
+================================================ */
+:root {
+  --base-color: #6c757d;
+  --base-light-color: #f2f2f2;
+  --primary-color: #f8ebe5;
+  --sub-color: #dbeaa4;
+  --accent-color: #f4f4ab;
+}
+
+/* user-select */
+body {
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+}
+
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-body {
+  text-align: left;
+}
+
+@media print {
+  body {
+    display: none
+  }
+}
+
+/* nav */
+.navbar-brand {
+  width: clamp(2.5rem, 2.197rem + 1.51vw, 3.125rem);
+}
+
+.navbar-brand img {
+  margin-bottom: 0 !important;
+}
+
+@media (min-width: 992px) {
+  #sideNav .navbar-brand {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar-brand img {
+    margin-bottom: 1rem !important;
+  }
+}
+
+/* 均等揃え */
+.justify {
+  text-align: justify;
+}
+
+/* 見出しラインマーカー 共通 */
+.marker {
+  line-height: 1;
+}
+
+/* 見出しラインマーカー グレー*/
+.base-marker {
+  background: linear-gradient(transparent 64%, var(--base-light-color) 36%);
+}
+
+/* 見出しラインマーカー ピンク*/
+.primary-marker {
+  background: linear-gradient(transparent 68%, var(--primary-color) 32%);
+}
+
+/* 見出しラインマーカー グリーン*/
+.sub-marker {
+  background: linear-gradient(transparent 64%, var(--sub-color) 36%);
+}
+
+/* 見出しラインマーカー イエロー*/
+.accent-marker {
+  background: linear-gradient(transparent 64%, var(--accent-color) 36%);
+}
+
+/* 100vh → auto */
+section.min-height {
+  min-height: auto;
+}
+
+/* 英字大文字変換 → 変換なし */
+.text-transform {
+  text-transform: none;
+}
+
+/* 可変フォント */
+p.lead {
+  font-size: clamp(1rem, 0.945rem + 0.27vw, 1.15rem);
+}
+
+/* リンクボタン */
+.link-btn {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+footer .link-btn {
+  bottom: -1rem;
+}
+
+.page-top:hover a,
+.link-btn:hover>* {
+  transform: translate(0, -8px);
+}
+
+.btn-shadow {
+  position: relative;
+  border: 2px solid var(--base-color);
+}
+
+.btn-shadow::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-color);
+  z-index: -1;
+  border-radius: 0.375rem;
+}
+
+.btn-shadow-2::before {
+  background-color: var(--primary-color);
+}
+
+/* pagetop */
+.page-top {
+  position: relative;
+  display: none;
+}
+
+.page-top a {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  display: inline-block;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid #6c757d;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transition: 0.2s;
+}
+
+.page-top a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: auto;
+  border-top: 1px solid var(--base-color);
+  border-right: 1px solid var(--base-color);
+  transform: rotate(-45deg);
+}
+
+/* リンクホバー */
+.opacity:hover {
+  opacity: 0.9;
+}
+
+/* 文字のちらつき */
+* {
+  letter-spacing: 0.05rem;
+  visibility: hidden;
+}
+
+.wf-active * {
+  visibility: visible;
+}
+
+
+.show {
+  display: block;
+  transition: opacity 2s ease-out;
+  opacity: 1;
+}
+
+
+/* JS機能 コンテンツフェードイン
+================================================ */
+/* 不透明度0で非表示 */
+.fadeIn {
+  transition: 1s;
+  opacity: 0;
+}
+
+/* 不透明度1で表示 */
+.fadeIn.animated {
+  opacity: 1;
+}
+
+.loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  /* 背景色の設定 */
+  background-color: #ffffff;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ローディングアニメーション */
+
+.loading {
+  display: flex;
+  justify-content: center;
+  /* 水平方向の中央揃え */
+  align-items: center;
+  /* 垂直方向の中央揃え */
+  height: 100vh;
+  /* ビューポートの高さを100%に */
+  margin: 0;
+  background-color: hsl(199, 100%, 85%);
+  opacity: 1;
+  /* 初期の不透明度 */
+  transition: opacity 1s ease;
+  /* フェードアウトのトランジション */
+}
+
+.loader {
+  text-align: center;
+  /* テキストを中央揃え */
+}
+
+.loading__text {
+  font-size: 36px;
+  /* フォントサイズを設定 */
+  color: #3498db;
+  /* 初期のテキストの色 */
+  overflow: hidden;
+  /* はみ出た部分を隠す */
+  white-space: nowrap;
+  /* テキストが折り返さないように */
+  animation: reveal 4s linear infinite, colorChange 4s linear infinite;
+  /* アニメーションを設定 */
+  clip-path: inset(0 100% 0 0);
+  /* 初期状態で右側を隠す */
+}
+
+/* アニメーションの定義 */
+@keyframes reveal {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    /* 右側を完全に隠す */
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+    /* 完全に表示 */
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #3498db;
+    /* 初期色 */
+  }
+
+  50% {
+    color: #e74c3c;
+    /* 中間色 */
+  }
+
+  100% {
+    color: #3498db;
+    /* 元の色に戻す */
+  }
+
+
+}
+
+.practice_img {
+  width: 100%;
+}

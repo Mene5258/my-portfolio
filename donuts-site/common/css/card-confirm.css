@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+main {
+  background-color: var(--white-color);
+  padding-bottom: 36px;
+}
+
+.logo {
+  width: 60px;
+  height: 50px;
+  margin: 12px 0 0 12px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--brown-color);
+  text-align: center;
+  margin: 40px 0 50px;
+}
+
+.card-inner {
+  max-width: 295px;
+  margin: 0 auto;
+}
+
+.confirm-top {
+  font-size: 12px;
+  color: var(--brown-color);
+  margin-bottom: 4px;
+}
+
+.confirm-bottom {
+  font-size: 12px;
+  color: var(--black-color);
+  border-left: 2px solid var(--brown-color);
+  margin-bottom: 20px;
+  padding: 2px 0 2px 4px;
+}
+
+form {
+  margin: 0 auto;
+}
+
+
+button {
+  font-size: 16px;
+  background-color: var(--brown-color);
+  width: 200px;
+  height: 48px;
+  display: block;
+  margin: 80px auto 0;
+  color: var(--white-color);
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-10px);
+}
+
+.login-box {
+  font-size: 12px;
+  text-align: center;
+  border: 2px solid #e8c2ca;
+  width: 295px;
+  color: #a56d55;
+  padding: 36px 0;
+  margin: 0 auto;
+}
+
+.reverse {
+  text-align: right;
+  margin-top: 24px;
+  margin-right: 40px;
+  color: var(--brown-color);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-transform: uppercase;
+}
+
+.reverse a {
+  font-size: 12px;
+  color: var(--brown-color);
+}
+
+@media screen and (min-width:768px) {
+  main {
+    padding-bottom: 230px;
+  }
+
+  .main-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .logo {
+    width: 80px;
+    height: 67px;
+    margin: 20px 0 0 20px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin: 73px 0 70px;
+  }
+
+  .card-inner {
+    max-width: 270px;
+  }
+
+  .confirm-top {
+    font-size: 24px;
+  }
+
+  .confirm-bottom {
+    font-size: 24px;
+    padding: 2px 0 2px 8px;
+  }
+
+  main form {
+    max-width: 600px;
+  }
+
+  button {
+    font-size: 20px;
+    width: 300px;
+    height: 60px;
+    margin-top: 80px;
+  }
+
+  button:hover {
+    transform: translateY(-10px);
+  }
+
+  .reverse {
+    text-align: right;
+    max-width: 300px;
+    margin: 24px auto 0;
+    padding: 0;
+  }
+
+  .reverse a {
+    font-size: 20px;
+  }
+
+  .reverse a:hover {
+    background-color: var(--sub-color);
+    color: var(--black-color);
+  }
+
+}

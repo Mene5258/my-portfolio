@@ -1,0 +1,605 @@
+@charset "utf-8";
+
+:root {
+  --black-color: #333333;
+  --brown-color: #7F5539;
+  --main-color: #EDE0D4;
+  --white-color: #fff;
+  --red-color: #BF0000;
+  --yellow-color: #FFD233;
+  --sub-color: #D9D9D9;
+  --sub2-color: #B392AC;
+}
+
+* {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--main-color);
+}
+
+/* header sp ｺｺｶﾗ */
+header {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  height: 127px;
+}
+
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.header-flex li {
+  width: 100px;
+}
+
+.header-flex li:first-of-type {
+  text-align: left;
+}
+
+.header-flex li:last-of-type {
+  text-align: right;
+}
+
+
+#hamburger-style {
+  margin-top: 31px;
+  margin-left: 12.5px;
+  width: 24px;
+  height: 20px;
+}
+
+.logo-icon {
+  width: 60px;
+  height: 50px;
+  margin-top: 16px;
+}
+
+.login-icon {
+  height: 34px;
+  margin-top: 24px;
+  margin-right: 12px;
+}
+
+.cart-icon {
+  height: 34px;
+  margin-top: 24px;
+  margin-right: 11.5px;
+}
+
+header form {
+  display: flex;
+  justify-content: center;
+}
+
+header form input[type="search"] {
+  padding: 5px;
+  width: 318px;
+  height: 37px;
+  border: 1px solid var(--brown-color);
+  order: 2
+}
+
+/* もともとの検索ボタン非表示 */
+#submit-btn {
+  display: none;
+}
+
+/* 検索ボタン枠 */
+.submit-btn {
+  width: 34px;
+  height: 37px;
+  background-color: var(--sub-color);
+  border: 1px solid var(--brown-color);
+  border-right: transparent;
+}
+
+/* 検索ボタン画像 */
+.submit-btn img {
+  width: 18px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* メニューここから */
+#menu-container {
+  z-index: 90;
+  position: fixed;
+  background-color: #95735e;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 100%;
+}
+
+.show {
+  transform: translate3d(100%, 0, 0);
+}
+
+.menu-logo {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-left: 12px;
+  padding-top: 12px;
+  padding-bottom: 60px;
+}
+
+#close-btn {
+  width: 26px;
+  height: 26px;
+  margin-right: 12px;
+}
+
+.menu-list {
+  text-align: start;
+  margin: 0 12px;
+}
+
+.menu-list li:first-child {
+  border-top: none;
+}
+
+.menu-list li {
+  border-top: 1px solid var(--white-color);
+  border-bottom: 1px solid var(--white-color);
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+.menu-list li a {
+  color: var(--white-color);
+  padding-left: 12px;
+  display: block;
+}
+
+/* メニューここまで */
+/* ドロワーここまで */
+/* header spここまで */
+
+
+/* パンくずリスト ここから*/
+.breadcrumb {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 0 12px 20.5px;
+}
+
+.breadcrumb-item {
+  font-size: 12px;
+  margin-right: 0.5em;
+  color: var(--brown-color);
+}
+
+.breadcrumb-item:last-of-type {
+  margin-right: 0;
+}
+
+.breadcrumb-item::after {
+  content: "\03e";
+  margin-left: 0.5em;
+}
+
+.breadcrumb-item:last-child::after {
+  content: "";
+  /* 最後の項目には区切りを表示しない */
+}
+
+.breadcrumb-item a {
+  font-size: 12px;
+  color: var(--brown-color);
+  text-decoration: none;
+}
+
+/* パンくずリスト ここまで*/
+
+
+/* ログイン表示部 ｺｺｶﾗ */
+.user {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--brown-color);
+  background-color: var(--white-color);
+  padding: 9px 0 9px 20px;
+}
+
+.border {
+  border-top: 1px solid var(--brown-color);
+}
+
+/* ログイン表示部 ｺｺﾏﾃﾞ */
+
+
+/* footer spここから */
+footer {
+  background-color: var(--main-color);
+  color: var(--brown-color);
+  height: 310px;
+}
+
+.footer-link {
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.footer-link p {
+  padding-left: 10px;
+  margin-bottom: 20px;
+  border-left: 2px solid var(--sub2-color);
+}
+
+.footer-link p a {
+  font-size: 12px;
+  color: var(--brown-color);
+}
+
+.footer-icon {
+  display: flex;
+  margin-top: 24px;
+  margin-left: 12px;
+}
+
+.footer-icon li {
+  margin-left: 20px;
+}
+
+.footer-icon li:first-of-type {
+  margin: 0;
+}
+
+.footer-icon li img {
+  width: 32px;
+  height: 32px;
+}
+
+.footer-logo {
+  margin: 24px 12px 24px 0;
+  text-align: right;
+}
+
+.footer-logo img {
+  width: 72px;
+}
+
+.copyright {
+  text-align: center;
+  margin-bottom: 27px;
+}
+
+small {
+  font-size: 8px;
+}
+
+/* footer spここまで */
+.hearts-btn {
+  background: transparent;
+  color: var(--red-color);
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.show {
+  color: red;
+  font-size: 20px;
+}
+
+
+
+@media screen and (min-width:768px) {
+
+  /* header pc ｺｺｶﾗ */
+  header {
+    height: 174px;
+  }
+
+  #inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header-flex {
+    margin-bottom: 26px;
+  }
+
+  header .header-flex li {
+    width: 170px;
+  }
+
+  #hamburger-style {
+    width: 48px;
+    height: 38px;
+    margin-top: 39px;
+    margin-left: 12px;
+    cursor: pointer;
+  }
+
+  .logo-icon {
+    width: 80px;
+    height: 67px;
+  }
+
+  .login-icon {
+    height: 60px;
+    margin-top: 24px;
+    margin-right: 32px;
+  }
+
+  .cart-icon {
+    height: 60px;
+    margin-top: 24px;
+    margin-right: 12px;
+  }
+
+  .max-inner {
+    background-color: var(--sub2-color);
+    width: 100%;
+    height: 64px;
+  }
+
+  header form {
+    justify-content: right;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  header form input[type="search"] {
+    width: 320px;
+    height: 40px;
+    margin: 12px 12.5px 12px 0;
+  }
+
+  .submit-btn {
+    width: 40px;
+    height: 40px;
+    margin: 12px 0;
+  }
+
+  .submit-btn:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+
+
+  /* PCメニューここから */
+  #menu-container {
+    /* display: none; */
+    z-index: 90;
+    position: fixed;
+    height: 100%;
+    width: 600px;
+    top: 0;
+    right: 100%;
+  }
+
+  .show {
+    transform: translate3d(100%, 0, 0);
+  }
+
+  .menu-logo {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin-left: 12px;
+    padding-top: 12px;
+    padding-bottom: 60px;
+  }
+
+  .menu-logo img {
+    width: 87px;
+    height: 78px;
+  }
+
+  #close-btn {
+    width: 54px;
+    height: 54px;
+    cursor: pointer;
+  }
+
+  .menu-list {
+    text-align: start;
+    width: 400px;
+    margin: 0 100px;
+  }
+
+  .menu-list li:first-child {
+    border-top: none
+  }
+
+  .menu-list li {
+    border-top: 1px solid var(--white-color);
+    border-bottom: 1px solid var(--white-color);
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .menu-list li a {
+    color: var(--white-color);
+    padding-left: 12px;
+  }
+
+  .menu-list li:hover {
+    background-color: #c0c0c0;
+  }
+
+  /* PCメニューここまで */
+  /* PCドロワーここまで */
+  /* header pcｺｺﾏﾃﾞ */
+
+
+  /* SPログイン表示部 ｺｺｶﾗ */
+  .user {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 12px 0 12px 20.5px;
+  }
+
+  /* SPログイン表示部 ｺｺﾏﾃﾞ */
+
+  /* SPぱんくず ここから */
+  .breadcrumb {
+    max-width: 1200px;
+  }
+
+  .breadcrumb-item a {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+  }
+
+  .breadcrumb-item a:hover {
+    background-color: var(--sub-color);
+    color: var(--black-color);
+  }
+
+  /* SPぱんくず ここまで */
+
+
+  /* footer pcここから */
+  footer {
+    height: 450px;
+  }
+
+  .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .footer-link {
+    display: flex;
+  }
+
+  .footer-link p {
+    width: 170px;
+    padding: 8px 0 8px 12px;
+    margin-bottom: 0;
+  }
+
+  .footer-link p a {
+    font-size: 16px;
+  }
+
+  .footer-link p a:hover {
+    background-color: #53ff5d;
+  }
+
+  .footer-icon {
+    justify-content: space-between;
+    width: 350px;
+    margin-top: 40px;
+  }
+
+  .footer-icon li img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .footer-logo {
+    text-align: center;
+    margin: 60px 0 40px;
+  }
+
+  .footer-logo img {
+    width: 140px;
+  }
+
+  .copyright {
+    margin-bottom: 65px;
+  }
+
+  small {
+    font-size: 12px;
+  }
+
+  /* footer pcここまで */
+  /* ハートスタイル */
+  .hearts-btn {
+    font-size: 24px;
+  }
+
+  .show {
+    color: red;
+    font-size: 24px;
+  }
+
+  /* 以下ゲーミングハート */
+
+  /* .show {
+  animation: rainbow 3s infinite;
+  -webkit-animation: rainbow 3s infinite;
+}
+
+@keyframes rainbow {
+  12% {
+    color: #ff5353;
+  }
+
+  24% {
+    color: #ffcf53;
+  }
+
+  36% {
+    color: #e8ff53;
+  }
+
+  48% {
+    color: #53ff5d;
+  }
+
+  60% {
+    color: #53ffbc;
+  }
+
+  72% {
+    color: #5393ff;
+  }
+
+  84% {
+    color: #ca53ff;
+  }
+
+  100% {
+    color: #ff53bd;
+  }
+}
+
+@-webkit-keyframes rainbow {
+  12% {
+    color: #ff5353;
+  }
+
+  24% {
+    color: #ffcf53;
+  }
+
+  36% {
+    color: #e8ff53;
+  }
+
+  48% {
+    color: #53ff5d;
+  }
+
+  60% {
+    color: #53ffbc;
+  }
+
+  72% {
+    color: #5393ff;
+  }
+
+  84% {
+    color: #ca53ff;
+  }
+
+  100% {
+    color: #ff53bd;
+  }
+} */
+}

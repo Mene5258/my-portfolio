@@ -1,0 +1,551 @@
+@charset "UTF-8";
+
+/* ローディングアニメーション */
+.loading {
+  align-items: center;
+  /* 垂直方向の中央揃え */
+  width: 100vw;
+  height: 100vh;
+  /* ビューポートの幅、高さを100%に */
+  margin: 0;
+  transition: all 1s;
+  background-color: #EDE0D4;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.content {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content img {
+  mix-blend-mode: multiply;
+  height: auto;
+  /* opacity: 0.5; */
+  animation: rotateY 3s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+}
+
+
+@keyframes rotateY {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  70% {
+    transform: rotateY(360deg);
+  }
+
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.rotating-element {
+  animation: rotateY 3s cubic-bezier(0.5, 0, 0.5, 1) forwards;
+}
+
+.txt {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.txt p {
+  color: #7F5539;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: .06em;
+  margin: 0;
+  /* ここからアニメーション関係 */
+  transform: translateY(2em);
+  animation: textanimation 1s forwards;
+}
+
+/* 1文字目 */
+.txt p:nth-child(1) {
+  animation-delay: 0.2s
+}
+
+/* 2文字目 */
+.txt p:nth-child(2) {
+  animation-delay: 0.4s
+}
+
+/* 3文字目 */
+.txt p:nth-child(3) {
+  animation-delay: 0.6s
+}
+
+/* 4文字目 */
+.txt p:nth-child(4) {
+  animation-delay: 0.8s
+}
+
+/* 5文字目 */
+.txt p:nth-child(5) {
+  animation-delay: 1s
+}
+
+/* 6文字目 */
+.txt p:nth-child(6) {
+  animation-delay: 1.2s
+}
+
+/* 7文字目 */
+.txt p:nth-child(7) {
+  animation-delay: 1.4s
+}
+
+/* 8文字目 */
+.txt p:nth-child(8) {
+  animation-delay: 1.6s
+}
+
+/* 9文字目 */
+.txt p:nth-child(9) {
+  animation-delay: 1.8s
+}
+
+/* 10文字目 */
+.txt p:nth-child(10) {
+  animation-delay: 2s
+}
+
+@keyframes textanimation {
+  0% {
+    transform: translateY(2em);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* JSでclass追加 */
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ここまで */
+
+main {
+  background-color: #fff;
+  width: 100%;
+}
+
+/* ランク・itemの左右margin */
+.mx {
+  margin: 0 20px;
+}
+
+/* 画像フルード化 */
+.fluid {
+  object-fit: cover;
+  width: 100%;
+  height: 200px;
+}
+
+/* 共通文字サイズ */
+.login-text,
+input[type="submit"] {
+  font-size: 12px;
+}
+
+/* ログイン名の表示 */
+.login-text {
+  color: var(--brown-color);
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.top-hero {
+  text-align: center;
+}
+
+.top-item-container {
+  margin: 20px;
+}
+
+.top-item-content {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin: 0 auto;
+  max-width: 335px;
+}
+
+.top-item-content a,
+.top-item2 {
+  color: var(--white-color);
+}
+
+
+
+.top-item1>p:last-child,
+.top-item2>p,
+.top-image>p {
+  font-size: clamp(0.75rem, -1.917rem + 5.56vw, 2.25rem);
+}
+
+.top-item1,
+.top-item2 {
+  width: clamp(9.875rem, -28.125rem + 79.17vw, 31.25rem);
+  height: clamp(9.875rem, -28.125rem + 79.17vw, 31.25rem);
+}
+
+.top-item1 {
+  background: url(../../common/images/product-item5.jpg) no-repeat center / cover;
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-item1 p:first-child {
+  font-size: clamp(0.75rem, -1.472rem + 4.63vw, 2rem);
+  margin-top: 5px;
+  margin-left: 5px;
+  width: clamp(2.5rem, -9.259rem + 24.5vw, 9.114rem);
+  height: clamp(2.5rem, -9.259rem + 24.5vw, 9.114rem);
+  border-radius: 50%;
+  line-height: clamp(2.5rem, -9.259rem + 24.5vw, 9.114rem);
+  text-align: center;
+  background-color: #FF8877;
+}
+
+.top-item1 p:last-child,
+.top-item2 p {
+  margin-bottom: 5px;
+  margin-right: 5px;
+  align-self: flex-end;
+}
+
+.top-item2 {
+  background: url(../../common/images/top_icon.jpg) no-repeat center / cover;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-image {
+  margin: 20px auto 0;
+  width: clamp(20.938rem, -57.396rem + 163.19vw, 65rem);
+  height: clamp(5.188rem, -14.146rem + 40.28vw, 16.063rem);
+  /* width: 335px;
+  height: 83px; */
+  background: url(../../common/images/top01.jpg) no-repeat center / contain;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.top-image p {
+  align-self: flex-end;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  font-weight: bold;
+  color: var(--brown-color);
+}
+
+/* philosophy */
+.top-bg {
+  background: url(../../common/images/top02.jpg) no-repeat top / cover;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  text-align: center;
+  color: var(--white-color);
+  position: relative;
+}
+
+.top-bg::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+}
+
+.top-bg h1,
+.top-bg p {
+  position: relative;
+  z-index: 2;
+}
+
+.top-bg h1 {
+  font-size: 24px;
+  padding-top: 100px;
+}
+
+.top-bg p:nth-child(2),
+.top-bg p:nth-child(4) {
+  font-size: 16px;
+}
+
+.top-bg p:nth-child(2) {
+  margin-top: 20px;
+}
+
+.top-bg p:nth-child(3) {
+  font-size: 20px;
+  margin-top: 60px;
+}
+
+.top-bg p:nth-child(4) {
+  margin-top: 12px;
+  padding-bottom: 300px;
+}
+
+/* ランク */
+.top-rank h2 {
+  display: inline-block;
+  margin: 32px auto 0;
+  font-size: 20px;
+  border-bottom: 4px solid var(--yellow-color);
+}
+
+.top-rank-content {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.top-rank-content li p:nth-child(5) {
+  font-size: 12px;
+}
+
+/* 人気ランキング */
+.top-rank-content a {
+  display: block;
+}
+
+.top-rank-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.top-rank-content li {
+  flex-basis: 158px;
+  margin-bottom: 80px;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+/* 各ランクのスタイル */
+.top-rank {
+  text-align: center;
+}
+
+.top-rank-content>li>form>.rank {
+  margin: 0 auto;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  margin-bottom: 20px;
+  background-color: var(--yellow-color);
+}
+
+.top-rank-content>li:not(:first-child)>form>.rank {
+  background-color: #E8C2CA
+}
+
+.rank a {
+  color: var(--white-color);
+}
+
+.product-fluid {
+  width: 158px;
+  height: 158px;
+}
+
+.product-name {
+  text-align: left;
+  line-height: 1.6;
+  margin: 20px 0 22px;
+  /* medium */
+  font-weight: 500;
+}
+
+.product-name a {
+  color: var(--brown-color);
+}
+
+.price-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22.3px;
+}
+
+.price {
+  text-align: left;
+}
+
+.price a {
+  color: var(--red-color);
+}
+
+input[type="submit"] {
+  width: 100%;
+  text-align: center;
+  background-color: var(--brown-color);
+  color: var(--white-color);
+  padding: 12px 37px;
+}
+
+/* PC以下 */
+@media screen and (min-width:768px) {
+  /* 最大ブレイクポイント1200px */
+
+  .mx {
+    margin: 0;
+  }
+
+  .login-text {
+    color: var(--brown-color);
+    padding-bottom: 0;
+    /* 本当はmarginで24px空けたいけどheaderにマイナス12px入ってしまうのでどこかで見直したい */
+    padding-top: 24px;
+    max-width: 1200px;
+    margin: 12px auto
+  }
+
+  .fluid {
+    object-fit: cover;
+    object-position: 0 -85px;
+    height: 593px;
+  }
+
+
+  /* nwe product etc */
+  .top-item-container {
+    max-width: 1200px;
+    margin: 80px auto;
+  }
+
+  /* rank */
+  section {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .top-item-content {
+    max-width: 1040px;
+    margin: auto 80px;
+    justify-content: center;
+  }
+
+  .top-item1 {
+    margin-right: 20px;
+  }
+
+  .top-item2 {
+    margin-left: 20px;
+  }
+
+  .top-image {
+    margin-top: 40px;
+    background: url(../../common/images/top01.jpg) no-repeat center / cover;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* philosopy */
+  .top-bg h1 {
+    font-size: 36px;
+    padding-top: 200px;
+  }
+
+  .top-bg p:nth-child(2) {
+    font-size: 20px;
+  }
+
+  .top-bg p:nth-child(3),
+  .top-bg p:nth-child(4) {
+    font-size: 24px;
+  }
+
+  .top-bg p:nth-child(3) {
+    margin-top: 40px;
+  }
+
+  .top-bg p:nth-child(4) {
+    margin-top: 20px;
+    padding-bottom: 283px;
+  }
+
+  /* rank */
+  .top-rank h2 {
+    margin-top: 80px;
+    font-size: 32px;
+  }
+
+  .top-rank input[type="submit"] {
+    font-size: 20px;
+  }
+
+  .top-rank-content {
+    margin: 0 60px;
+    max-width: 1200px;
+    padding-bottom: 160px;
+  }
+
+  /* 各ランク */
+  .top-rank-content li {
+    flex-basis: 320px;
+  }
+
+  .top-rank-content>li>form>.rank {
+    margin: 0 auto;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+  }
+
+  .top-rank-content>li>form>.rank {
+    margin-bottom: 20px;
+  }
+
+  .rank a {
+    font-size: 24px;
+  }
+
+  .product-fluid {
+    width: 320px;
+    height: 320px;
+  }
+
+  .product-name a {
+    margin: 20px 0 22px;
+    font-size: 24px;
+  }
+
+  .price-content {
+    margin-bottom: 20px;
+  }
+
+  .price {
+    text-align: left;
+  }
+
+  .price a {
+    font-size: 24px;
+  }
+
+  input[type="submit"] {
+    width: 81%;
+    padding: 16px auto;
+  }
+
+}
