@@ -1,0 +1,453 @@
+@charset "utf-8";
+
+.zen-kaku-gothic-new-regular {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+header {
+  background: url(../../トップ/images/top_header_bg.jpg) no-repeat right center/cover;
+  height: 667px;
+}
+
+h1 img {
+  width: 335px;
+  height: 135px;
+  margin: 160px 20px 372px;
+}
+
+.header_logo img {
+  width: 100px;
+  height: 39.6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+
+/* Drawer Menu */
+/* ↓チェックボックスが OFF の場合 */
+/* nav 要素 画面上部に固定表示 */
+.gMenu {
+  /* 右上に固定・前面表示 */
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+/* input 要素 チェックボックスを非表示 */
+.menu-btn {
+  display: none;
+}
+
+.gMenu img,
+.menu-icon {
+  /* 右上に絶対配置 */
+  position: absolute;
+  right: 5px;
+  top: 16px;
+  height: 48px;
+  width: 48px;
+  padding-top: 5px;
+
+  /* ポインターの形状 指 */
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ul 要素 メニュー */
+.menu {
+  color: #fff;
+  background-color: #000;
+  font-family: "Zen Kaku Gothic New";
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline 0.3px;
+  margin-bottom: 32px;
+  text-align: center;
+  /* 非表示 */
+  overflow: hidden;
+  /* 最大の高さ */
+  max-height: 0;
+  /* 非表示の際のアニメーション */
+  transition: max-height 0.6s;
+}
+
+/* 1 つ目の li 要素 */
+.menu li:first-of-type {
+  padding-top: 120px;
+}
+
+/* a 要素 */
+.menu a {
+  display: block;
+  /* padding-top: 24px; */
+  margin-bottom: 28px;
+  margin-top: 32px;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #000;
+}
+
+/* ↓チェックボックスが ON の場合 */
+/* 非表示にしていた ul.menu を表示 */
+.menu-btn:checked~.menu {
+  max-height: inherit;
+  height: 100vh;
+  /* 元 0px */
+}
+
+.menu-btn:checked~.gMenu {
+  background: transparent;
+  /* ↑チェックボックスが OFF の場合 */
+}
+
+
+
+
+/* ローディングアニメーション */
+
+/* ロゴの位置、背景設定 */
+#loading {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #0180BE;
+  z-index: 555;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes taiwan_logo_loading {
+  0% {
+    opacity: 0
+  }
+
+  20% {
+    opacity: 0.3;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.taiwan_logo {
+  animation-name: taiwan_logo_loading;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+/* jsでクラスloadedを付与　その後設定した要素を消す */
+.loaded {
+  opacity: 1;
+  visibility: hidden;
+}
+
+/* ここまで */
+
+/* モーダル */
+dialog {
+  width: 100vw;
+  background: #0180be;
+  z-index: 99;
+  position: fixed;
+  top: 0px;
+  padding: 8px;
+}
+
+dialog button img {
+  position: absolute;
+  top: 8px;
+  right: 0px;
+  transform: translate(-50%, -50%);
+  width: 28px;
+  height: 28px;
+  margin: 8px;
+}
+
+
+/* topボタン */
+html {
+  scroll-behavior: smooth;
+}
+
+.btn_sp {
+  background: #f4f4f4;
+  height: 88px;
+}
+
+.btn_king_wrapper {
+  max-width: 1024px;
+  position: relative;
+  margin: 0 auto;
+
+}
+
+.top_go {
+  margin: 20px;
+  margin-right: 8px;
+  width: 48px;
+  height: 48px;
+  display: inline-block;
+  background: #00000050;
+  border-radius: 50%;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.top_go::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-top: 5px solid #fff;
+  border-left: 5px solid #fff;
+  position: absolute;
+  top: 35%;
+  right: 30%;
+  transform: rotate(45deg);
+  border-radius: 20%;
+}
+
+.top_go a {
+  display: inline-block;
+  height: 48px;
+  width: 48px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+
+
+/* footer部分　css */
+
+footer {
+  background: #0180BE;
+  text-align: center;
+  color: #fff;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.flag {
+  margin-bottom: 20px;
+}
+
+footer ul,
+small {
+  margin: 20px 0;
+}
+
+.flag {
+  padding-top: 20px;
+}
+
+footer ul {
+  list-style: none;
+  font-size: 12px;
+  padding-left: 0px;
+}
+
+.footer_menu {
+  width: 200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer_menu li {
+  border-bottom: 1px #fff solid;
+  padding-bottom: 8px;
+  padding-top: 12px;
+}
+
+.footer_menu li:nth-child(1) a,
+span {
+  text-transform: uppercase;
+}
+
+.footer_menu li a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 7.5px;
+  display: block;
+}
+
+.sns_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sns_link li {
+  margin-right: 20px;
+}
+
+.sns_link img {
+  width: 30px;
+  object-fit: contain;
+}
+
+small {
+  display: block;
+  padding-bottom: 20px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  font-size: 10px;
+}
+
+.pc_logo {
+  display: none;
+}
+
+.pc_logo img {
+  width: 120%;
+}
+
+
+
+@media screen and (min-width:768px) {
+
+  /* footer */
+  .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 84%;
+    margin: 0 auto;
+  }
+
+  .footer_menu {
+    flex-basis: 25%;
+    margin: 0;
+    font-size: 20px;
+  }
+
+  footer .flag img {
+    width: 64px;
+    height: 48px;
+  }
+
+  .footer_menu li:hover {
+    font-weight: bold;
+    transform: translateX(10px);
+    border-bottom: 1px #6CBAD8 solid;
+  }
+
+  .footer_menu li a:hover {
+    color: #EDA184;
+
+  }
+
+  .pc_logo {
+    flex-basis: 20%;
+    visibility: visible;
+    display: flex;
+    justify-content: left;
+  }
+
+
+  .pc_logo img {
+    transform: translateX(-20px);
+  }
+
+  .sns_link {
+    flex-basis: 18%;
+    margin: 0;
+  }
+
+  .sns_link img {
+    width: 55px;
+  }
+
+  .sns_link li:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in;
+  }
+
+  small {
+    font-size: 12px;
+  }
+
+  /* 上に戻りボタン */
+  .btn_sp {
+    height: 240px;
+  }
+
+  .top_go {
+    margin-top: 80px;
+    margin-bottom: 60px;
+    width: 100px;
+    height: 100px;
+    transition: all 0.3s ease-in;
+
+
+  }
+
+  .top_go::before {
+    width: 30px;
+    height: 30px;
+    top: 40%;
+    right: 35%;
+    border-top: 10px solid #fff;
+    border-left: 10px solid #fff;
+  }
+
+  .top_go a {
+    width: 100px;
+    height: 100px;
+
+  }
+
+  .top_go:hover {
+    background: #000;
+    transform: translateY(-20px);
+    transition: all 0.3s ease-in;
+  }
+
+  /* modal */
+  dialog section {
+    display: flex;
+  }
+
+  dialog button img {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    margin: 8px;
+  }
+}
+
+@media screen and (min-width:1024px) {
+
+  /* footer部分 */
+  footer {
+    display: grid;
+    place-content: center;
+  }
+
+  .king_wrapper {
+    width: 1024px;
+  }
+}
