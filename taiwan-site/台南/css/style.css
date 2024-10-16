@@ -1,0 +1,539 @@
+html {
+  background-color: #F4F4F4;
+}
+
+.breadcrumb {
+  text-align: left;
+}
+
+img {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* header要素 */
+
+header {
+  background: url(../images/背景画像.png)no-repeat right center/cover;
+  height: 667px;
+  margin-right: 0px;
+  margin-left: 0px;
+}
+
+header p {
+  padding: 0;
+}
+
+.taichu_logo {
+  width: 199px;
+  height: 372px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+
+}
+
+.header_logo {
+  text-align: left;
+  justify-content: left;
+}
+
+.header_logo img {
+  width: 111px;
+  height: 45px;
+  margin-left: 0;
+  margin-right: 0;
+
+}
+
+.taichutext {
+  position: absolute;
+  color: #fff;
+  right: 0;
+  bottom: 0;
+  width: 247px;
+  height: 58px;
+  text-align: left;
+  margin-left: 0;
+  margin-right: 0;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.6;
+}
+
+
+/* Drawer Menu */
+/* ↓チェックボックスが OFF の場合 */
+/* nav 要素 画面上部に固定表示 */
+.gMenu {
+  /* 右上に固定・前面表示 */
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  width: 100%;
+}
+
+/* input 要素 チェックボックスを非表示 */
+.menu-btn {
+  display: none;
+}
+
+.gMenu img,
+.menu-icon {
+  /* 右上に絶対配置 */
+  position: absolute;
+  right: 5px;
+  top: 16px;
+  height: 48px;
+  width: 48px;
+  padding-top: 5px;
+  /* ポインターの形状 指 */
+  cursor: pointer;
+  color: #fff;
+}
+
+/* ul 要素 メニュー */
+.menu {
+  color: #fff;
+  background-color: #000;
+  font-family: "Zen Kaku Gothic New";
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: underline 0.3px;
+  margin-bottom: 32px;
+  text-align: center;
+  /* 非表示 */
+  overflow: hidden;
+  /* 最大の高さ */
+  max-height: 0;
+  /* 非表示の際のアニメーション */
+  transition: max-height 0.6s;
+}
+
+/* 1 つ目の li 要素 */
+.menu li:first-of-type {
+  padding-top: 120px;
+}
+
+/* a 要素 */
+.menu a {
+  display: block;
+  /* padding-top: 24px; */
+  margin-bottom: 28px;
+  margin-top: 32px;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background-color: #000;
+}
+
+/* ↓チェックボックスが ON の場合 */
+/* 非表示にしていた ul.menu を表示 */
+.menu-btn:checked~.menu {
+  max-height: inherit;
+  height: 100vh;
+  /* 元 0px */
+}
+
+.menu-btn:checked~.gMenu {
+  background: transparent;
+  /* ↑チェックボックスが OFF の場合 */
+}
+
+/* headerここまで */
+
+h1,
+h2,
+h3,
+h4 {
+  text-align: center;
+  font-family: 'Zen Kaku Gothic New';
+}
+
+h2 {
+  font-size: 24px;
+  background: url(../images/heading_line.png) no-repeat right center/cover;
+  margin-top: 60px;
+  margin-bottom: 40px;
+  width: 220px;
+  height: 40px;
+}
+
+.act {
+  margin-top: 40px;
+}
+
+.title {
+  text-align: center;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.sippo {
+  font-size: 12px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+h4 {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+.logo3 {
+  width: 295px;
+  height: 221px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo4 {
+  width: 140px;
+  height: 152px;
+  margin-right: 7.5px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.logo5 {
+  width: 140px;
+  height: 152px;
+  margin-left: 7.5px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo6 {
+  width: 295px;
+  height: 221px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo7 {
+  width: 137px;
+  height: 150px;
+  margin-right: 7.5px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo8 {
+  width: 137px;
+  height: 150px;
+  margin-left: 7.5px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo9 {
+  width: 295px;
+  height: 130px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo10 {
+  width: 295px;
+  height: 130px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo11 {
+  width: 295px;
+  height: 130px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo12 {
+  width: 295px;
+  height: 130px;
+  padding-bottom: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo13 {
+  width: 295px;
+  height: 205px;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.logo14 {
+  width: 295px;
+  height: 205px;
+  margin-top: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+p {
+  /* width: 295px; */
+  font-size: 12px;
+  font-family: 'Zen Kaku Gothic New';
+  font-weight: normal;
+  text-align: center;
+}
+
+.black {
+  background-color: rgba(100, 201, 156, 0.2);
+  width: 295px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 8px 33.5px;
+}
+
+.black2 {
+  background-color: rgba(100, 201, 156, 0.2);
+  width: 295px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+.blue {
+  background-color: rgba(100, 201, 156, 0.2);
+  width: 295px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 20px 16px;
+}
+
+.blue2 {
+  background-color: rgba(100, 201, 156, 0.2);
+  width: 295px;
+  margin: 0 auto;
+  text-align: left;
+  padding: 8px 16px;
+}
+
+.white {
+  width: 295px;
+  margin: 0 auto;
+  text-align: left;
+  padding-bottom: 12px;
+}
+
+.white2 {
+  width: 295px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 20px;
+}
+
+.white3 {
+  width: 295px;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 20px;
+  padding-bottom: 116px;
+}
+
+.btn {
+  border: 2px solid #EDA184;
+  width: 120px;
+  height: 36px;
+  margin: 0 0 0 auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.triangle1 {
+  width: 0;
+  height: 0;
+  border-top: solid 7px transparent;
+  /* border-right: solid transparent; */
+  border-bottom: solid 7px transparent;
+  border-left: solid 7px;
+  display: inline-block;
+  color: #EDA184;
+}
+
+.arrow-button {
+  width: 120px;
+  height: 36px;
+  position: relative;
+  background-color: transparent;
+  /* 背景色 */
+  /* 文字色 */
+  text-align: center;
+  /* 文字のアライメント */
+  display: inline-block;
+  /* ボタンの表示方法 */
+  font-size: 12px;
+  font-family: 'Zen Kaku Gothic New';
+  margin: 4px 2px;
+  /* 外側の余白 */
+  cursor: pointer;
+  /* カーソル */
+  border: 2px solid #EDA184;
+  /* 枠線 */
+  margin: 0 0 0 auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  margin-top: -7px;
+  border-width: 7px;
+  border-style: solid;
+  border-color: #EDA184 transparent transparent transparent;
+  transform: rotate(-90deg);
+}
+
+.kakomi {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.hurigana {
+  padding: 8px 12px;
+}
+
+.himo {
+  width: 220px;
+  height: 40px;
+}
+
+.setume {
+  width: 225px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  text-align: left;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+.hr {
+  width: 225px;
+  margin: 0 auto;
+}
+
+.hr2 {
+  width: 225px;
+  margin: 60px auto;
+}
+
+/* footer部分　css */
+
+footer {
+  background: #0180BE;
+  text-align: center;
+  color: #fff;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.flag {
+  margin-bottom: 20px;
+}
+
+footer ul,
+small {
+  margin: 20px 0;
+}
+
+.flag {
+  padding-top: 20px;
+}
+
+footer ul {
+  list-style: none;
+  font-size: 12px;
+  padding-left: 0px;
+}
+
+.footer_menu {
+  width: 200px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.footer_menu li {
+  border-bottom: 1px #fff solid;
+  padding-bottom: 8px;
+  padding-top: 12px;
+}
+
+.footer_menu li:nth-child(1) a,
+span {
+  text-transform: uppercase;
+}
+
+.footer_menu li a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 7.5px;
+  display: block;
+}
+
+.sns_link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sns_link li {
+  margin-right: 20px;
+}
+
+.sns_link img {
+  width: 30px;
+  object-fit: contain;
+}
+
+small {
+  display: block;
+  padding-bottom: 20px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  font-size: 10px;
+}
+
+.pc_logo {
+  visibility: hidden;
+}
+
+.pc_logo img {
+  width: 120%;
+}

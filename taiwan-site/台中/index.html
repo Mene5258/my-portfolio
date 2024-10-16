@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../common/css/destyle.css">
+  <link rel="stylesheet" href="../common/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <!-- 左上小さいロゴ -->
+
+    <div class="header_logo">
+      <a href="../index.html"><img src="../../common/images/logo.svg" alt="taiwan">
+      </a>
+    </div>
+
+    <nav class="gMenu">
+      <a href="../index.html"><img src="../common/images/drawer_icon.svg" alt="">
+      </a>
+      <!-- メニュー開閉用 -->
+      <input type="checkbox" id="menu-btn" class="menu-btn">
+      <!-- アイコン作成用 -->
+      <label class="menu-icon" for="menu-btn"></label>
+
+
+
+      <ul class="menu">
+        <li class="mini_logo"></li>
+        <li><a href="../index.html">TOP</a></li>
+        <li><a href="../台北/index.html">台北</a></li>
+        <li><a href="../台中/index.html">台中</a></li>
+        <li><a href="../台南/index.html">台南</a></li>
+
+      </ul>
+    </nav>
+
+
+
+    <!-- 背景画像 -->
+    <h1>
+      <img src="images/taichu_logo.png" alt="taichu_logo" class="taichu_logo">
+    </h1>
+
+    <p class="taichutext">台湾で2番目の大都市を誇る台中市。台中市は台湾中部の台中盆地にあり、いくつもの河川が台中市の中心地を貫いています。</p>
+
+  </header>
+  <!-- ローディング画面 作業時コメントアウト推奨 -->
+
+  <figure id="loading">
+    <img src="../common/images/logo.svg" class="taiwan_logo">
+  </figure>
+
+  <!-- ここまで -->
+  <main>
+
+    <!-- パンくず -->
+
+    <nav>
+      <ol class="breadcrumb">
+        <li>
+          <a href="../index.html">Top</a>
+        </li>
+
+        <li><a href="">台中</a></li>
+      </ol>
+    </nav>
+
+    <section class="attraction">
+
+      <h2 class="subheading">Attraction<span> 観光名所</span>
+      </h2>
+
+      <h3>高美湿地</h3>
+
+      <div class="attractionimg">
+        <img src="images/taichu_attraction_main.jpg">
+      </div>
+
+      <div class="attractiontext">
+        <p>
+          台中から北西へ約20km、大甲溪の河口に広がるおよそ1500ヘクタールの高美湿地は、天気など条件が重なると周りの風景を鏡面のように反射されることから「台湾のウユニ塩湖」と呼ばれて注目を集めています。湿地には100種以上の鳥が生息しており、バードウォッチングを楽しんでいる人も！周辺には海から吹き付ける風を利用した風力発電の施設があり、自然の景色と人工物が融合して独特の景観をつくり出しています。穴場のスポットです。
+        </p>
+      </div>
+
+      <div class="attractionimg">
+        <img src="images/taichu_attraction_sub.jpg">
+      </div>
+
+      <div class="attractiontext">
+        <p>干潮と日暮れが重なるタイミングの景色がおすすめです。</p>
+      </div>
+
+      <!-- 境界線 -->
+      <div class="border"><span></span></div>
+
+      <h3>彩虹眷村</h3>
+      <div class="attractionimg">
+        <img src="images/taichu_attraction_main2.jpg">
+      </div>
+
+      <div class="attractiontext">
+        <p>
+          台湾中部台中市には「彩虹眷村」というインパクトのある場所があります。一度見たら忘れられない鮮やかな色使いの絵で埋め尽くされたこの地区、日本語にすると「虹の村」と称されるこの場所は、家にも壁にも道路にもびっしりと絵が描かれています。そしてこの絵を描いたのは、たった一人のおじいちゃんなのです。今回は見れば元気になる台中市の必見スポットをご紹介します。
+        </p>
+      </div>
+
+      <div class="attractionimg">
+        <img src="images/taichu_attraction_sub2.jpg">
+      </div>
+
+      <div class="attractiontext">
+        <p>周辺住民の方々のご迷惑とならないように早朝や深夜は避けて、日中に訪れましょう。</p>
+      </div>
+    </section>
+
+    <section class="museum">
+      <h2>Museum
+        <span> 文化施設</span>
+      </h2>
+
+      <p class="museumtext">文化の街とも呼ばれる台中。<br>
+        おすすめの文化施設をご紹介します。</p>
+
+      <p class="museumtitle">アンティーク博物館<br>
+        <span>新天地西洋博物館</span>
+      </p>
+      <div class="museumimg">
+        <img src="images/taichu_museum_main.jpg">
+      </div>
+
+      <p>サザビーズやクリスティーズから厳選された、千点を超える西洋アンティークの収蔵品を展示しています。</p>
+
+      <div class="space">
+        <button id="openbtn1" class="btn">
+          <p>営業時間を見る<span class="triangle1"></span></p>
+        </button>
+
+        <dialog id="dialog1">
+          <button id="closebtn1"><img src="../common/images/mordal_close.png" alt=""></button>
+          <section>
+            <h3>新天地西洋博物館</h3>
+            <div class="mordal_pbox">
+              <img src="images/md/taichu_modal5.jpg">
+              <img src="images/md/taichu_modal6.jpg">
+            </div>
+            <p class="dialogtext">営業時間：10:00〜18:00
+            </p>
+            <p class="dialogtext"> 住所：台中市東区旱渓東路一段456号1階</p>
+
+          </section>
+        </dialog>
+
+      </div>
+      <p class="museumtitle">科学美術館<br>
+        <span>アジア近代美術館</span>
+      </p>
+
+      <div class="museumimg">
+        <img class="museumimg" src="images/taichu_museum_main2.jpg">
+      </div>
+
+      <p>20世紀以降のアジア各国の画家や彫刻家による作品を集めて展示しています。</p>
+      <div class="space">
+        <button id="openbtn2" class="btn">
+          <p>営業時間を見る<span class="triangle1"></span></p>
+        </button>
+
+        <dialog id="dialog2">
+          <button id="closebtn2"><img src="../common/images/mordal_close.png" alt=""></button>
+          <section>
+            <h3>アジア近代美術館</h3>
+            <div class="mordal_pbox">
+              <img src="images/md/taichu_modal1.jpg">
+              <img src="images/md/taichu_modal2.jpg">
+            </div>
+            <p class="">営業時間：9:30～17:00
+            </p>
+            <p class=""> 住所：台中市霧峰區柳豐路500號</p>
+          </section>
+        </dialog>
+
+      </div>
+      <p class="museumtitle">屋内外美術館<br>
+        <span>勤美術館</span>
+      </p>
+
+      <div class="museumimg">
+        <img class="museumimg" src="images/taichu_museum_main3.jpg">
+      </div>
+      <p>絵画、彫刻、インスタレーション、マルチメディア作品など、多様な現代アート作品が展示されています。</p>
+
+      <div class="space">
+        <button id="openbtn3" class="btn">
+          <p>営業時間を見る<span class="triangle1"></span></p>
+        </button>
+
+        <dialog id="dialog3">
+          <button id="closebtn3"><img src="../common/images/mordal_close.png" alt=""></button>
+          <section>
+            <h3>勤美術館</h3>
+            <div class="mordal_pbox">
+              <img src="images/md/taichu_modal3.jpg">
+              <img src="images/md/taichu_modal4.jpg">
+            </div>
+            <p class="">営業時間：09:00〜17:00
+            </p>
+            <p class="">住所：台中市西區館前路71號</p>
+          </section>
+        </dialog>
+
+      </div>
+      <p class="museumtitle">歴史文学を学ぶ<br>
+        <span>台中文学館</span>
+      </p>
+
+      <div class="museumimg">
+        <img class="museumimg" src="images/taichu_museum_main4.jpg">
+      </div>
+      <p>日本統治時代に警察宿舎として建てられた建築物を修繕し、文学公園として開放しています。</p>
+
+      <div class="space">
+        <button id="openbtn4" class="btn">
+          <p>営業時間を見る<span class="triangle1"></span></p>
+        </button>
+
+        <dialog id="dialog4">
+          <button id="closebtn4"><img src="../common/images/mordal_close.png" alt=""></button>
+          <section>
+            <h3>台中文学館</h3>
+            <div class="mordal_pbox">
+              <img src="images/md/taichu_modal7.jpg">
+              <img src="images/md/taichu_modal8.jpg">
+            </div>
+            <p class="">営業時間：09:00〜17:00
+            </p>
+            <p class=""> 住所：台中市楽群街38号</p>
+          </section>
+        </dialog>
+
+      </div>
+
+    </section>
+
+    <section class="sweets">
+
+      <h2>Sweets<span> スイーツ
+        </span>
+      </h2>
+
+      <h3>宮原眼科</h3>
+      <p>台湾全土でも大人気のスイーツが集まる台中市で絶対人気を誇るお店、宮原眼科をご紹介します。</p>
+
+      <img src="images/taichu_sweets_main.jpg">
+      <p>
+        宮原眼科は、日本統治時代の1927年、日本人の宮原武熊という眼科医が開院し、1945年までは台中で最大規模の眼科診療所だった場所です。宮原医師が日本に帰国後、パイナップルケーキとチーズケーキで有名な台湾の日出グループが、1年半の時間をかけて建物を修復し、店舗にしました。
+      </p>
+      <div class="sweetsimgs">
+        <img src="images/taichu_sweets_sub1.jpg">
+        <img src="images/taichu_sweets_sub2.jpg">
+      </div>
+      <p>現在は、歴史的な特徴を持つ建物や、台湾グルメやスイーツを楽しむ人々で、とても賑わっています。</p>
+      <img src="images/taichu_sweets_main2.jpg">
+
+    </section>
+
+  </main>
+
+  <!--上に行くボタン  -->
+  <div class="btn_sp">
+    <div class="btn_king_wrapper">
+      <button class="top_go"><a href="#"></a></button>
+    </div>
+  </div>
+  <!-- footer部分 -->
+  <footer>
+    <div class="wrapper">
+      <div class="flag"><img src="../common/images/national_flag.svg" alt=""></div>
+      <ul class="footer_menu">
+        <li><a href="../index.html">top</a></li>
+        <li><a href="../台北/index.html">台北</a></li>
+        <li><a href="../台中/index.html">台中</a></li>
+        <li><a href="../台南/index.html">台南</a></li>
+        <li><a href="#">当サイトのポリシー</a></li>
+        <li><a href="#">お問い合わせ</a></li>
+      </ul>
+
+      <ul class="sns_link">
+        <li><img src="../common/images/footer_fb_icon.png" alt="facebookicon"></li>
+        <li><a href="#"><img src="../common/images/footer_instaglam.png" alt="instglamicon"></a></li>
+        <li><img src="../common/images/footer_x_icon.png" alt="xicon"></li>
+      </ul>
+
+
+    </div>
+    <small>copyright (C) <span class="tm_upper">taiwan</span> traveler </small>
+  </footer>
+
+  <script src="/台中/js/main.js"></script>
+  <script src="../common/js/main.js"></script>
+</body>
+
+</html>
