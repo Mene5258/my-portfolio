@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Noto+Sans+JP&family=Noto+Serif+JP&family=Zen+Kaku+Gothic+New&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="common/css/destyle.css">
+  <link rel="stylesheet" href="common/css/style.css">
+  <link rel="stylesheet" href="トップ/css/style.css">
+  <title>TaiwanSite</title>
+
+</head>
+
+<body>
+  <header>
+    <h1>
+      <img src="common/images/logo.svg" alt="taiwan_logo">
+    </h1>
+
+    <!-- 左上小さいロゴ -->
+    <!-- <div class="header_logo">
+      <a href="#"><img src="common/images/logo.svg" alt="taiwan">
+      </a>
+    </div> -->
+    <nav class="gMenu">
+      <a href="#"><img src="common/images/drawer_icon.svg" alt="">
+      </a>
+      <!-- メニュー開閉用 -->
+      <input type="checkbox" id="menu-btn" class="menu-btn">
+      <!-- アイコン作成用 -->
+      <label class="menu-icon" for="menu-btn"></label>
+
+
+
+      <ul class="menu">
+        <li class="mini_logo"></li>
+        <li><a href="index.html">TOP</a></li>
+        <li><a href="台北/index.html" alt="台北">台北</a></li>
+        <li><a href="台中/index.html" alt="台中">台中</a></li>
+        <li><a href="台南/index.html" alt="台南">台南</a></li>
+
+      </ul>
+    </nav>
+
+
+  </header>
+
+  <!-- ローディング画面 -->
+
+  <figure id="loading">
+    <img alt="" src="common/images/logo.svg" class="taiwan_logo">
+  </figure>
+
+  <!-- ここまで -->
+
+
+  <main>
+    <dialog class="dialog">
+      <button id="closebtn"><img src="common/images/mordal_close.png" alt=""></button>
+
+      <div class="modal_pic">
+        <img src="トップ/images/top_slider1.jpg" id="modal_main">
+      </div>
+    </dialog>
+    <section class="introduction">
+
+      <div class="int_top">
+        <div class="main_wrapper">
+          <div class="flex_pc">
+            <div class="flg"><img src="common/images/national_flag.svg" alt="国旗"></div>
+            <h2>formosa<br><span>フォルモサ（麗しの島）</span></h2>
+          </div>
+          <div class="formosa1"><img src="トップ/images/top_formosa1.jpg" alt="いい感じの紹介画像"></div>
+        </div>
+      </div>
+      <div class="int_bottom">
+        <div class="main_wrapper">
+          <div class="pa">
+            <p>フォルモサは、十六世紀にポルトガル人がエメラルド色の美しい台湾を見つけて発した賛嘆の言葉です。緑にあふれた台湾の美しい風景が、あなたを桃源郷の世界へといざなってくれるでしょう。</p>
+          </div>
+          <div class="formosa2"><img src="トップ/images/top_formosa2.jpg" alt="いい感じの紹介画像"></div>
+        </div>
+      </div>
+    </section>
+    <section class="gallery">
+      <div class="main_wrapper">
+
+        <h2>gallery&nbsp;<span>ギャラリ－</span></h2>
+        <div class="slider">
+          <div class="contents">
+            <img src="トップ/images/top_slider1.jpg" alt="竜" id="main_image" class="modal_img"
+              data-image="トップ/images/top_slider1.jpg">
+            <img src="トップ/images/top_slider2.jpg" alt="路面電車" id="main_image2" class="modal_img"
+              data-image="トップ/images/top_slider2.jpg">
+            <img src="トップ/images/top_slider3.jpg" alt="茶" id="main_image3" class="modal_img"
+              data-image="トップ/images/top_slider3.jpg">
+            <img src="トップ/images/top_slider4.jpg" alt="提灯" id="main_image4" class="modal_img"
+              data-image="トップ/images/top_slider4.jpg">
+            <img src="トップ/images/top_slider5.jpg" alt="路地" id="main_image5" class="modal_img"
+              data-image="トップ/images/top_slider5.jpg">
+          </div>
+          <ul id="btn_line">
+            <li id="pre_btn" class="slider_btn"></li>
+            <li><input type="radio" id="sl1" name="sldbtn" checked><label for="sl1" class="slider_btn"
+                data-image="トップ/images/top_slider1.jpg"></label></li>
+            <li>
+              <input type="radio" id="sl2" name="sldbtn"><label for="sl2" class="slider_btn"
+                data-image="トップ/images/top_slider2.jpg"></label>
+            </li>
+            <li><input type="radio" id="sl3" name="sldbtn"><label for="sl3" class="slider_btn"
+                data-image="トップ/images/top_slider3.jpg"></label></li>
+            <li><input type="radio" id="sl4" name="sldbtn"><label for="sl4" class="slider_btn"
+                data-image="トップ/images/top_slider4.jpg"></label></li>
+            <li><input type="radio" id="sl5" name="sldbtn"><label for="sl5" class="slider_btn"
+                data-image="トップ/images/top_slider5.jpg"></label></li>
+            <li id="next" class="slider_btn"></li>
+
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="travel">
+      <div class="main_wrapper">
+
+        <h2>travel&nbsp;<span>おすすめスポット</span></h2>
+        <div class="travel_flex">
+          <div class="travel_ex">
+            <p>訪れた人々を魅了する「美麗島」台湾。そんな台湾の人気スポットを代表する地を３つのエリアでご紹介します。様々な風景に誰もが魅了されるでしょう。</p>
+          </div>
+          <div class="map">
+            <img src="トップ/images/top_travel_map.png" alt="マップ" class="map_base">
+            <img src="トップ/images/top_travel_taipei.png" alt="台北" class="mini_name" id="map_taipei"
+              data-href="台北/index.html">
+            <img src="トップ/images/top_travel_taichu.png" alt="台中" class="mini_name" id="map_taichu"
+              data-href="台中/index.html">
+            <img src="トップ/images/top_travel_tainan.png" alt="台南" class="mini_name" id="map_tainan"
+              data-href="台南/index.html">
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="event">
+      <div class="main_wrapper">
+
+        <h2>event&nbsp;<span>おすすめイベント</span></h2>
+        <section class="event_tan">
+          <div class="event_picture">
+            <h3>台湾ランタンフェスティバル</h3>
+            <img src="トップ/images/top_event1.jpg" alt="">
+          </div>
+          <div class="event_time">
+            <p class="event_period">開催期間</p>
+            <p class="event_date">春節 旧暦元日（2月24日～3月2日）</p>
+            <p class="event_info">春節の風習として「天燈」と呼ばれる紙製のランタンに無病息災などの祈りを書き込み、火種を用いて熱気球と同じ原理で空に飛ばす儀式です。吉祥や邪気払いの意味があります。</p>
+          </div>
+        </section>
+        <section class="event_count">
+          <div class="event_picture">
+            <h3>台北最High新年城<br>カウントダウンパーティー</h3>
+
+            <img src="トップ/images/top_event2.jpg" alt="カウントダウンパーティー">
+
+          </div>
+          <div class="event_time">
+            <p class="event_period">開催期間</p>
+            <p class="event_date">12月31日～1月1日</p>
+            <p class="event_info">台北101では毎年、元旦0時から約3分間、ビルを覆い尽くすように新年を祝う花火が舞い上がります。世界中から注目されるイベントの一つです。</p>
+          </div>
+        </section>
+      </div>
+    </section>
+    <section class="basic_info">
+      <div class="main_wrapper">
+
+        <h2>台湾基本情報</h2>
+        <dl class="dl_big">
+          <dt>国名</dt>
+          <dd>中華民国・台湾 </dd>
+          <dt>首都</dt>
+          <dd>台北</dd>
+          <dt>人口</dt>
+          <dd>約2,300万人</dd>
+          <dt>面積</dt>
+          <dd>約3万6,000km²</dd>
+          <dt>人種・民族</dt>
+          <dd>漢民族、先住民</dd>
+          <dt>宗教</dt>
+          <dd>仏教、道教、キリスト教、その他</dd>
+          <dt>言語</dt>
+          <dd>北京語、台湾語</dd>
+          <dt>通貨</dt>
+          <dd>元（ニュー台湾ドル）</dd>
+          <dt>時差</dt>
+          <dd>1時間</dd>
+          <dt>台湾の気候・服装</dt>
+          <dd class="big_item">亜熱帯に属し一年を通して温暖な台湾。しかし北回帰線から南は熱帯で暑く、北部は大陸性気候の影響 を受けて冷え込むこともあります。地域差を考慮して服装を準備しましょう。</dd>
+
+          <dt>台湾の祝祭日</dt>
+          <dd>
+            <dl class="dl_celeblate">
+              <dt>正月</dt>
+              <dd>1月1日</dd>
+              <dt>端午節</dt>
+              <dd>6月22日</dd>
+              <dt>春節</dt>
+              <dd>1月20日～29日</dd>
+              <dt>中秋節 </dt>
+              <dd>9月29日 </dd>
+              <dt>平和記念日</dt>
+              <dd>2月28日</dd>
+              <dt>国慶節</dt>
+              <dd>10月10日</dd>
+              <dt>清明節</dt>
+              <dd>4月5日</dd>
+            </dl>
+          </dd>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+
+  <!--上に行くボタン  -->
+  <div class="btn_sp">
+    <div class="btn_king_wrapper">
+      <button class="top_go"><a href="#"></a></button>
+    </div>
+  </div>
+
+  <!-- footer部分 -->
+  <footer>
+    <div class="king_wrapper">
+      <div class="flag"><img src="common/images/national_flag.svg" alt=""></div>
+      <div class="wrapper">
+        <ul class="footer_menu">
+          <li><a href="../index.html">top</a></li>
+          <li><a href="台北/index.html">台北</a></li>
+          <li><a href="台中/index.html">台中</a></li>
+          <li><a href="台南/index.html">台南</a></li>
+          <li><a href="#">当サイトのポリシー</a></li>
+          <li><a href="#">お問い合わせ</a></li>
+        </ul>
+
+        <div class="pc_logo"><img src="common/images/PC_logo.svg" alt="logo"></div>
+
+        <ul class="sns_link">
+          <li><a href="#"><img src="common/images/footer_fb_icon.png" alt="facebookicon"></a></li>
+          <li><a href="#"><img src="common/images/footer_instaglam.png" alt="instglamicon"></a></li>
+          <li><a href="#"><img src="common/images/footer_x_icon.png" alt="xicon"></a></li>
+        </ul>
+
+
+      </div>
+      <small>copyright (C) <span class="tm_upper">taiwan</span> traveler </small>
+    </div>
+  </footer>
+
+  <script src="トップ/js/main.js"></script>
+  <script src="common/js/main.js"></script>
+  <script src="common/js/modal.js"></script>
+
+</body>
+
+</html>
